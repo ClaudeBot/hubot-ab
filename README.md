@@ -1,0 +1,29 @@
+# Hubot: AB
+
+A Hubot script for [Muan's AB](http://ab.muan.co/). A 4-digit number guessing game.
+
+
+## Installation via NPM
+
+1. Install the __hubot-ab__ module as a Hubot dependency by adding it to your `package.json` file:
+
+    ```
+    npm install --save hubot-ab
+    ```
+
+2. Enable the script by adding the __hubot-ab__ entry to your `external-scripts.json` file:
+
+    ```json
+    ["hubot-ab"]
+    ```
+
+3. Run `npm install`
+
+
+## Commands
+
+Command | Description
+--- | ---
+hubot guess `number` | Returns a feedback indicating how accurate your 4-digit `number` guess is
+hubot guess __surrender__ | Restarts the game with a new number, duh!
+hubot guess __tutorial__ | Tells you how to play this game
