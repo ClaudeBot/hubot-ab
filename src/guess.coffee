@@ -2,9 +2,6 @@
 #   4-digit guessing game
 #   Based on AB, The Game by Muan (http://ab.muan.co/)
 #
-# Dependencies:
-#   None
-#
 # Configuration:
 #   None
 #
@@ -66,7 +63,7 @@ suffix = (number) ->
 win = (msg) ->
     msg.reply "#{msg.match[1]} is the right answer! You got it at the #{suffix(players[msg.message.user.name].attempts)} attempt."
     restart msg.message.user.name
-    console.log players
+    #console.log players
 
 restart = (user) ->
     players[user] = null
