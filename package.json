@@ -1,7 +1,7 @@
 {
   "name": "hubot-ab",
   "description": "A Hubot script for Muan's AB. A 4-digit number guessing game.",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
   "author": "Ian Lai <ian@fyianlai.com>",
   "license": "MIT",

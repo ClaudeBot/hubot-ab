@@ -80,6 +80,7 @@ module.exports = (robot) ->
 
         if players[msg.message.user.name].answer is msg.match[1]
             win msg
+            return
 
         feedback = checkNumber players[msg.message.user.name].answer, msg.match[1]
 
