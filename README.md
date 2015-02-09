@@ -19,7 +19,7 @@ A Hubot script for [Muan's AB](http://ab.muan.co/). A 4-digit number guessing ga
     ]
     ```
 
-3. Run `npm install`
+3. Run your bot and see below for available config / commands
 
 
 ## Commands
