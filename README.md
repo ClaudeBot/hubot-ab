@@ -1,5 +1,7 @@
 # Hubot: AB
 
+[![Build Status](https://travis-ci.org/ClaudeBot/hubot-ab.svg)](https://travis-ci.org/ClaudeBot/hubot-ab)
+
 A Hubot script for [Muan's AB](http://ab.muan.co/). A 4-digit number guessing game.
 
 
