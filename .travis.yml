@@ -5,4 +5,4 @@ node_js:
 notifications:
     email: false
 before_script:
-    - npm install -g coffee-script grunt-cli
+    - npm install coffee-script grunt-cli
