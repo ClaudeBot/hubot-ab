@@ -60,39 +60,39 @@ suffix = (number) ->
 
     number
 
-win = (msg) ->
-    msg.reply "#{msg.match[1]} is the right answer! You got it at the #{suffix(players[msg.message.user.name].attempts)} attempt."
-    restart msg.message.user.name
+win = (res) ->
+    res.reply "#{res.match[1]} is the right answer! You got it at the #{suffix(players[res.message.user.name].attempts)} attempt."
+    restart res.message.user.name
     #console.log players
 
 restart = (user) ->
     players[user] = null
 
 module.exports = (robot) ->
-    robot.respond /guess (\d{4})/i, (msg) ->
-        if not players[msg.message.user.name]?
+    robot.respond /guess (\d{4})/i, (res) ->
+        if not players[res.message.user.name]?
             # Initialize
-            players[msg.message.user.name] =
+            players[res.message.user.name] =
                 answer: newNumber()
                 attempts: 0
 
-        ++players[msg.message.user.name].attempts
+        ++players[res.message.user.name].attempts
 
-        if players[msg.message.user.name].answer is msg.match[1]
-            win msg
+        if players[res.message.user.name].answer is res.match[1]
+            win res
             return
 
-        feedback = checkNumber players[msg.message.user.name].answer, msg.match[1]
+        feedback = checkNumber players[res.message.user.name].answer, res.match[1]
 
-        msg.reply "#{feedback[0]}A #{feedback[1]}B"
+        res.reply "#{feedback[0]}A #{feedback[1]}B"
 
-    robot.respond /guess surrender/i, (msg) ->
-        if players[msg.message.user.name]
-            restart msg.message.user.name
-            msg.reply "New game session created! #{msg.random(failure)}"
+    robot.respond /guess surrender/i, (res) ->
+        if players[res.message.user.name]
+            restart res.message.user.name
+            res.reply "New game session created! #{res.random(failure)}"
 
-    robot.respond /guess tutorial/i, (msg) ->
-        msg.reply "The goal of this game is to guess a 4-digit number within the least number of attempts possible."
-        msg.send "With every guess, you will get a feedback indicating how many A and B you got with the guess."
-        msg.send "An A means: one of the digits is correct, and is also at the right place."
-        msg.send "A B means: one of the digits is a right number, but not at the right place."
+    robot.respond /guess tutorial/i, (res) ->
+        res.reply "The goal of this game is to guess a 4-digit number within the least number of attempts possible."
+        res.send "With every guess, you will get a feedback indicating how many A and B you got with the guess."
+        res.send "An A means: one of the digits is correct, and is also at the right place."
+        res.send "A B means: one of the digits is a right number, but not at the right place."
