@@ -72,7 +72,7 @@ module.exports = (robot) ->
     robot.respond /guess (\d{4})/i, (msg) ->
         if not players[msg.message.user.name]?
             # Initialize
-            players[msg.message.user.name] = 
+            players[msg.message.user.name] =
                 answer: newNumber()
                 attempts: 0
 
