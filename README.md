@@ -4,6 +4,8 @@
 
 A Hubot script for [Muan's AB](http://ab.muan.co/). A 4-digit number guessing game.
 
+See [`src/guess.coffee`](src/guess.coffee) for full documentation.
+
 
 ## Installation via NPM
 
@@ -13,7 +15,7 @@ A Hubot script for [Muan's AB](http://ab.muan.co/). A 4-digit number guessing ga
     npm install --save hubot-ab
     ```
 
-2. Enable the script by adding the __hubot-ab__ entry to your `external-scripts.json` file:
+2. Enable the module by adding the __hubot-ab__ entry to your `external-scripts.json` file:
 
     ```json
     [
