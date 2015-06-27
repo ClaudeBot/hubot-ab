@@ -1,11 +1,9 @@
 {
   "name": "hubot-ab",
   "description": "A Hubot script for Muan's AB. A 4-digit number guessing game.",
-  "version": "1.1.1",
-
+  "version": "1.1.2",
   "author": "Ian Lai <ian@fyianlai.com>",
   "license": "MIT",
-
   "keywords": [
     "hubot",
     "hubot-scripts",
@@ -15,23 +13,17 @@
     "guessing",
     "predict"
   ],
-
   "repository": {
     "type": "git",
     "url": "https://github.com/ClaudeBot/hubot-ab.git"
   },
-
   "bugs": {
     "url": "https://github.com/ClaudeBot/hubot-ab/issues"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "peerDependencies": {
     "hubot": "2.x"
   },
-
   "devDependencies": {
     "chai": "^3.0.0",
     "coffee-script": "^1.9.3",
@@ -46,9 +38,7 @@
     "sinon": "^1.13.0",
     "sinon-chai": "^2.7.0"
   },
-
   "main": "index.coffee",
-
   "scripts": {
     "test": "grunt test"
   }
