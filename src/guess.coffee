@@ -69,7 +69,7 @@ restart = (user) ->
     players[user] = null
 
 module.exports = (robot) ->
-    robot.respond /guess (\d{4})/i, (res) ->
+    robot.respond /guess (\d{4})/i, id: "ab.guess", (res) ->
         if not players[res.message.user.name]?
             # Initialize
             players[res.message.user.name] =
@@ -86,12 +86,12 @@ module.exports = (robot) ->
 
         res.reply "#{feedback[0]}A #{feedback[1]}B"
 
-    robot.respond /guess surrender/i, (res) ->
+    robot.respond /guess surrender/i, id: "ab.surrender", (res) ->
         if players[res.message.user.name]
             restart res.message.user.name
             res.reply "New game session created! #{res.random(failure)}"
 
-    robot.respond /guess tutorial/i, (res) ->
+    robot.respond /guess tutorial/i, id: "ab.tutorial", (res) ->
         res.reply "The goal of this game is to guess a 4-digit number within the least number of attempts possible."
         res.send "With every guess, you will get a feedback indicating how many A and B you got with the guess."
         res.send "An A means: one of the digits is correct, and is also at the right place."

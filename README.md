@@ -29,11 +29,11 @@ See [`src/guess.coffee`](src/guess.coffee) for full documentation.
 
 ## Commands
 
-Command | Description
---- | ---
-hubot guess `number` | Returns a feedback indicating how accurate your 4-digit `number` guess is
-hubot guess surrender | Restarts the game with a new number, duh!
-hubot guess tutorial | Tells you how to play this game
+Command | Listener ID | Description
+--- | --- | ---
+hubot guess `number` | `ab.guess` | Returns a feedback indicating how accurate your 4-digit `number` guess is
+hubot guess surrender | `ab.surrender` | Restarts the game with a new number, duh!
+hubot guess tutorial | `ab.tutorial` | Tells you how to play this game
 
 
 ## Sample Interaction
